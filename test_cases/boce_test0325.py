@@ -41,15 +41,18 @@ input.click()
 input.send_keys("baidu.com")
 click = driver.find_element(By.CSS_SELECTOR, ".main02b2:nth-child(4)").click()
 
-"""
-try:
-    element = WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH, scan_nodes)))
-finally:
-    result_nodes = driver.find_element(By.XPATH, scan_nodes).text
-    print(result_nodes)
-"""
-sleep(30)
 
+#sleep(30)
+
+
+try:
+    element = WebDriverWait(driver, 40).until(EC.invisibility_of_element((By.XPATH, scan_nodes_xpath)))
+finally:
+    result_nodes = driver.find_element(By.XPATH, scan_nodes_xpath).text
+    print(result_nodes)
+
+
+"""
 result_nodes = driver.find_element(By.XPATH, scan_nodes_xpath).text
 result_response = driver.find_element(By.XPATH, average_response_xpath).text
 share_url = driver.find_element(By.XPATH, share_url_xpath).text
@@ -57,7 +60,7 @@ share_url = driver.find_element(By.XPATH, share_url_xpath).text
 print(result_nodes)
 print(result_response)
 print(share_url)
-
+"""
 driver.quit()
     
 
