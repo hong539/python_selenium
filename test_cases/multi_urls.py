@@ -8,9 +8,10 @@ driver = webdriver.Chrome(executable_path=r"webdriver_loaction_path/chromedriver
 driver.maximize_window()
 driver.delete_all_cookies()
 
-urls = [
-
-        ]
+urls = ["urt01",
+        "url02",
+        "url03"
+       ]
 
 for posts in range(len(urls)):
     print(posts)
